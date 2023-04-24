@@ -258,7 +258,8 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 0}
+  m_Reticle: {fileID: 6028622362366967116, guid: 01cff74073a997442ad31add87db5196,
+    type: 3}
   m_StopLineAtFirstRaycastHit: 1
 --- !u!120 &265445578
 LineRenderer:
@@ -1271,7 +1272,8 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 0}
+  m_Reticle: {fileID: 6028622362366967116, guid: 01cff74073a997442ad31add87db5196,
+    type: 3}
   m_StopLineAtFirstRaycastHit: 1
 --- !u!120 &753617800
 LineRenderer:

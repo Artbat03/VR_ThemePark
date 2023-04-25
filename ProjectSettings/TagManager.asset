@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ring
+  - Dart
+  - Bullet
+  - Basket
+  - Floor
   layers:
   - Default
   - TransparentFX

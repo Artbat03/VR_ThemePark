@@ -8,14 +8,22 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     // Variables
-    [SerializeField] private SpawnRings _spawnRings;
+    [Header("TEXTS")]
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    private void OnValidate()
+    [Space(15), Header("PANELS")]
+    [SerializeField] private Transform allPlayCanvasParent;
+    [SerializeField] private List<GameObject> playCanvas;
+    [SerializeField] private GameObject gameCanvas;
+
+    private void Awake()
     {
-        if (_spawnRings == null)
+        if (allPlayCanvasParent != null)
         {
-            _spawnRings = FindObjectOfType<SpawnRings>();
+            for (int i = 0; i < allPlayCanvasParent.childCount; i++)
+            {
+                playCanvas.Add(allPlayCanvasParent.GetChild(i).gameObject);
+            }
         }
     }
 
@@ -24,8 +32,24 @@ public class UIManager : MonoBehaviour
         scoreText.text = ScoreManager.instance.Score.ToString("00");
     }
 
+    public void Play(string standName)
+    {
+        HidePlayPanels();
+        gameCanvas.SetActive(true);
+        GameManager.instance.IsPlaying = true;
+        GameManager.instance.NameStandTransform(standName);
+    }
+    
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void HidePlayPanels()
+    {
+        foreach (GameObject playCanvas in playCanvas)
+        {
+            playCanvas.SetActive(false);
+        }
     }
 }

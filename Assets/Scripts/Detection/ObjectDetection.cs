@@ -21,7 +21,13 @@ public class ObjectDetection : MonoBehaviour
         }
         else if (other.CompareTag("Dart"))
         {
+            objectDetected = true;
+            ScoreManager.instance.Score += points;
+            other.GetComponent<DestroyObject>().DestroyObj();
+            objectDetected = false;
             Debug.Log("Dart points");
+            
+            Destroy(this.gameObject);
         }
     }
 

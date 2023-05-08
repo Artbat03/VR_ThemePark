@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Basket
   - Floor
+  - MusicSource
+  - SFXSource
+  - Cart
   layers:
   - Default
   - TransparentFX

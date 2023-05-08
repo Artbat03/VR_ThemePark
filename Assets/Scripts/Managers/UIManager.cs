@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     // Variables
+    public static UIManager instance;
+
     [Header("TEXTS")]
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -18,6 +20,8 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+        
         if (allPlayCanvasParent != null)
         {
             for (int i = 0; i < allPlayCanvasParent.childCount; i++)
@@ -34,7 +38,6 @@ public class UIManager : MonoBehaviour
 
     public void Play(string standName)
     {
-        HidePlayPanels();
         gameCanvas.SetActive(true);
         GameManager.instance.IsPlaying = true;
         GameManager.instance.NameStandTransform(standName);
@@ -45,6 +48,14 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void ShowPlayPanels()
+    {
+        foreach (GameObject playCanvas in playCanvas)
+        {
+            playCanvas.SetActive(true);
+        }
+    }
+    
     public void HidePlayPanels()
     {
         foreach (GameObject playCanvas in playCanvas)

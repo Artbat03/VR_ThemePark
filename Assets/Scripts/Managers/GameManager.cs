@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [Space(15), Header("STAND PARAMS")]
     [SerializeField] private bool isPlaying;
     [SerializeField] private string nameStand;
-
+    
     #region GETTERS && SETTERS
 
     public bool IsPlaying
@@ -72,15 +72,16 @@ public class GameManager : MonoBehaviour
     {
         if (standName == "RingsStand")
         {
-            playerTransform = gamePlayerTransforms[0];
+            playerTransform.position = gamePlayerTransforms[0].position;
         }
         else if (standName == "DartsStand")
         {
-            playerTransform = gamePlayerTransforms[1];
+            playerTransform.position = gamePlayerTransforms[1].position;
         }
         else if (standName == "TunnelStand")
         {
-            playerTransform = gamePlayerTransforms[2];
+            playerTransform.SetParent(gamePlayerTransforms[2].transform);
+            playerTransform.position = gamePlayerTransforms[2].position;
         }
     }
     
@@ -89,10 +90,12 @@ public class GameManager : MonoBehaviour
         if (isPlaying)
         {
             playerMovement.enabled = false;
+            UIManager.instance.HidePlayPanels();
         }
         else
         {
             playerMovement.enabled = true;
+            UIManager.instance.ShowPlayPanels();
         }
     }
 }

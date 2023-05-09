@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -10,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     
     [Header("PLAYER PARAMS")]
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] private PlayerController _playerController;
     [SerializeField] private ActionBasedContinuousMoveProvider playerMovement;
     
     [Space(15), Header("GAME PLAYER TRANSFORMS")]
@@ -44,9 +42,9 @@ public class GameManager : MonoBehaviour
             playerMovement = FindObjectOfType<ActionBasedContinuousMoveProvider>();
         }
 
-        if (playerTransform == null)
+        if (_playerController == null)
         {
-            playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
     }
 
@@ -72,16 +70,15 @@ public class GameManager : MonoBehaviour
     {
         if (standName == "RingsStand")
         {
-            playerTransform.position = gamePlayerTransforms[0].position;
+            _playerController.ResetPosition(gamePlayerTransforms[0]);
         }
         else if (standName == "DartsStand")
         {
-            playerTransform.position = gamePlayerTransforms[1].position;
+            _playerController.ResetPosition(gamePlayerTransforms[1]);
         }
         else if (standName == "TunnelStand")
         {
-            playerTransform.SetParent(gamePlayerTransforms[2].transform);
-            playerTransform.position = gamePlayerTransforms[2].position;
+            _playerController.ResetPosition(gamePlayerTransforms[2]);
         }
     }
     

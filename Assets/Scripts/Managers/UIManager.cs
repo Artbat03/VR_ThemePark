@@ -11,29 +11,35 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [Header("TEXTS")]
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI generalScoreText;
+    [SerializeField] private TextMeshProUGUI ringsScoreText;
+    [SerializeField] private TextMeshProUGUI dartsScoreText;
+    [SerializeField] private TextMeshProUGUI tunnelScoreText;
 
     [Space(15), Header("PANELS")]
-    [SerializeField] private Transform allPlayCanvasParent;
-    [SerializeField] private List<GameObject> playCanvas;
+    //[SerializeField] private Transform allPlayCanvasParent;
+    //[SerializeField] private List<GameObject> playCanvas;
     [SerializeField] private GameObject gameCanvas;
 
     private void Awake()
     {
         instance = this;
         
-        if (allPlayCanvasParent != null)
+        /*if (allPlayCanvasParent != null)
         {
             for (int i = 0; i < allPlayCanvasParent.childCount; i++)
             {
                 playCanvas.Add(allPlayCanvasParent.GetChild(i).gameObject);
             }
-        }
+        }*/
     }
 
     private void Update()
     {
-        scoreText.text = ScoreManager.instance.Score.ToString("00");
+        generalScoreText.text = ScoreManager.instance.RingsScore.ToString("00") + ScoreManager.instance.DartsScore.ToString("00") + ScoreManager.instance.TunnelScore.ToString("00");
+        ringsScoreText.text = ScoreManager.instance.RingsScore.ToString("00");
+        dartsScoreText.text = ScoreManager.instance.DartsScore.ToString("00");
+        tunnelScoreText.text = ScoreManager.instance.TunnelScore.ToString("00");
     }
 
     public void Play(string standName)
@@ -48,7 +54,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void ShowPlayPanels()
+    /*public void ShowPlayPanels()
     {
         foreach (GameObject playCanvas in playCanvas)
         {
@@ -62,5 +68,5 @@ public class UIManager : MonoBehaviour
         {
             playCanvas.SetActive(false);
         }
-    }
+    }*/
 }

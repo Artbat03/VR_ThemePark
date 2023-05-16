@@ -12,14 +12,14 @@ public class ObjectDetection : MonoBehaviour
     {
         if (other.CompareTag("Ring"))
         {
-            ScoreManager.instance.Score += points;
+            ScoreManager.instance.RingsScore += points;
             BottlesManager.instance.RingsInScene--;
             other.GetComponent<DestroyObject>().DestroyObj();
             Debug.Log("Ring Points");
         }
         else if (other.CompareTag("Dart"))
         {
-            ScoreManager.instance.Score += points;
+            ScoreManager.instance.DartsScore += points;
             BalloonManager.instance.DartsInScene--;
             other.GetComponent<DestroyObject>().DestroyObj();
             Debug.Log("Dart points");

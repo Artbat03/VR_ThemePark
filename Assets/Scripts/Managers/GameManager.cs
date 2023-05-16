@@ -87,12 +87,12 @@ public class GameManager : MonoBehaviour
         if (isPlaying)
         {
             playerMovement.enabled = false;
-            UIManager.instance.HidePlayPanels();
+            //UIManager.instance.HidePlayPanels();
         }
         else
         {
             playerMovement.enabled = true;
-            UIManager.instance.ShowPlayPanels();
+            //UIManager.instance.ShowPlayPanels();
         }
     }
 }

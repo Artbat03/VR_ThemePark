@@ -12,6 +12,7 @@ TagManager:
   - MusicSource
   - SFXSource
   - Cart
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Water
   - UI
   - Dardo
-  - Mano
-  - 
+  - Hands
+  - Interactive
   - 
   - 
   - 

@@ -17,21 +17,21 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tunnelScoreText;
 
     [Space(15), Header("PANELS")]
-    //[SerializeField] private Transform allPlayCanvasParent;
-    //[SerializeField] private List<GameObject> playCanvas;
+    [SerializeField] private Transform allPlayCanvasParent;
+    [SerializeField] private List<GameObject> playCanvas;
     [SerializeField] private GameObject gameCanvas;
 
     private void Awake()
     {
         instance = this;
         
-        /*if (allPlayCanvasParent != null)
+        if (allPlayCanvasParent != null)
         {
             for (int i = 0; i < allPlayCanvasParent.childCount; i++)
             {
                 playCanvas.Add(allPlayCanvasParent.GetChild(i).gameObject);
             }
-        }*/
+        }
     }
 
     private void Update()
@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    /*public void ShowPlayPanels()
+    public void ShowPlayPanels()
     {
         foreach (GameObject playCanvas in playCanvas)
         {
@@ -68,5 +68,5 @@ public class UIManager : MonoBehaviour
         {
             playCanvas.SetActive(false);
         }
-    }*/
+    }
 }

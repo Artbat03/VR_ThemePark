@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour
     [Space(15), Header("STAND PARAMS")]
     [SerializeField] private bool isPlaying;
     [SerializeField] private string nameStand;
+
+    [SerializeField] private GameObject rings;
+    [SerializeField] private GameObject darts;
+    [SerializeField] private GameObject pistol;
     
     #region GETTERS && SETTERS
 
@@ -61,6 +66,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        rings.SetActive(false);
+        darts.SetActive(false);
+        pistol.SetActive(false);
+    }
+
     private void Update()
     {
         CheckPlay();
@@ -87,12 +99,12 @@ public class GameManager : MonoBehaviour
         if (isPlaying)
         {
             playerMovement.enabled = false;
-            //UIManager.instance.HidePlayPanels();
+            UIManager.instance.HidePlayPanels();
         }
         else
         {
             playerMovement.enabled = true;
-            //UIManager.instance.ShowPlayPanels();
+            UIManager.instance.ShowPlayPanels();
         }
     }
 }

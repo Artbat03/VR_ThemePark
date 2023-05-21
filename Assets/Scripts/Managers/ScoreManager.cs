@@ -51,6 +51,11 @@ public class ScoreManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        CheckScoreForReward();
+    }
+
     public void CheckScoreForReward()
     {
         if (rewardsParent != null)
@@ -62,12 +67,12 @@ public class ScoreManager : MonoBehaviour
             }
             else if (dartsScore >= maxPointsToReach)
             {
-                Instantiate(ringsToy, rewardsParent.GetChild(1).position, rewardsParent.GetChild(1).rotation,
+                Instantiate(dartsToy, rewardsParent.GetChild(1).position, rewardsParent.GetChild(1).rotation,
                     rewardsParent.GetChild(1));
             }
             else if (tunnelScore >= maxPointsToReach)
             {
-                Instantiate(ringsToy, rewardsParent.GetChild(2).position, rewardsParent.GetChild(2).rotation,
+                Instantiate(tunnelToy, rewardsParent.GetChild(2).position, rewardsParent.GetChild(2).rotation,
                     rewardsParent.GetChild(2));
             }
         }

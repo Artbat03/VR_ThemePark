@@ -14,8 +14,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int dartsScore;
     [SerializeField] private int tunnelScore;
     
+    [Space(10)]
     [SerializeField] private int maxPointsToReach;
 
+    [SerializeField] private bool ringsToyReached;
+    [SerializeField] private bool dartsToyReached;
+    [SerializeField] private bool tunnelToyReached;
+    
     [Space(15), Header("REWARDS PARENT")]
     [SerializeField] private Transform rewardsParent;
     
@@ -44,6 +49,24 @@ public class ScoreManager : MonoBehaviour
         set => tunnelScore = value;
     }
 
+    public bool RingsToyReached
+    {
+        get => ringsToyReached;
+        set => ringsToyReached = value;
+    }
+    
+    public bool DartsToyReached
+    {
+        get => dartsToyReached;
+        set => dartsToyReached = value;
+    }
+    
+    public bool TunnelToyReached
+    {
+        get => tunnelToyReached;
+        set => tunnelToyReached = value;
+    }
+
     #endregion
 
     private void Awake()
@@ -55,18 +78,21 @@ public class ScoreManager : MonoBehaviour
     {
         if (rewardsParent != null)
         {
-            if (ringsScore >= maxPointsToReach)
+            if (ringsScore >= maxPointsToReach && !ringsToyReached)
             {
+                ringsToyReached = true;
                 Instantiate(ringsToy, rewardsParent.GetChild(0).position, rewardsParent.GetChild(0).rotation,
                     rewardsParent.GetChild(0));
             }
-            else if (dartsScore >= maxPointsToReach)
+            else if (dartsScore >= maxPointsToReach && !dartsToyReached)
             {
+                dartsToyReached = true;
                 Instantiate(dartsToy, rewardsParent.GetChild(1).position, rewardsParent.GetChild(1).rotation,
                     rewardsParent.GetChild(1));
             }
-            else if (tunnelScore >= maxPointsToReach)
+            else if (tunnelScore >= maxPointsToReach && !tunnelToyReached)
             {
+                tunnelToyReached = true;
                 Instantiate(tunnelToy, rewardsParent.GetChild(2).position, rewardsParent.GetChild(2).rotation,
                     rewardsParent.GetChild(2));
             }

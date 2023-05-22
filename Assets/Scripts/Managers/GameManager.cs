@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     // Variables
     public static GameManager instance;
-    
+
     [Header("PLAYER PARAMS")]
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform vagonetaTransform;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private ActionBasedContinuousMoveProvider playerMovement;
     
@@ -68,13 +70,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        rings.SetActive(false);
-        darts.SetActive(false);
-        pistol.SetActive(false);
-    }
-
     private void Update()
     {
         CheckPlay();
@@ -95,7 +90,9 @@ public class GameManager : MonoBehaviour
         else if (standName == "TunnelStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
-            Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
+            player.transform.SetParent(vagonetaTransform);
+            GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
+            gun.transform.SetParent(vagonetaTransform);
         }
     }
     

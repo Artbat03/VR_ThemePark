@@ -13,6 +13,8 @@ TagManager:
   - SFXSource
   - Cart
   - Button
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

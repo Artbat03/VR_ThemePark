@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2923515494003089243}
   - component: {fileID: 2923515494003089240}
   - component: {fileID: 2923515494003089242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pistola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2923515494698403409}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2923515494789199141}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrabPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3242090197878121699}
   - component: {fileID: 8553033636125852607}
   - component: {fileID: 4972306942759546718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canyon_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 5197032177487441202}
   - component: {fileID: 5532099328746975852}
   - component: {fileID: 699467288762122981}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pistola_Base_GEO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 9053122719516703299}
   - component: {fileID: 3131407051854975285}
   - component: {fileID: 4588589169482309006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canyon_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5643495209070196445}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canyones_GEO_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 5386793706367670430}
   - component: {fileID: 4053944685627831133}
   - component: {fileID: 2126083267494450004}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gatillo_GEO
   m_TagString: Untagged
   m_Icon: {fileID: 0}

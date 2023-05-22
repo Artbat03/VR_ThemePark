@@ -1,8 +1,15 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using CommonUsages = UnityEngine.XR.CommonUsages;
+using InputDevice = UnityEngine.XR.InputDevice;
 
 public class PlayerController : MonoBehaviour
 {
     // Variables
+    [Header("PLAYER PARAMS")]
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerHead;
 

@@ -7,6 +7,7 @@ public class PhysicsDamage : MonoBehaviour, ITakeDamage
 {
     // Variables
     private Rigidbody rb;
+    [SerializeField] private int targetPoints;
 
     private void Awake()
     {
@@ -16,5 +17,6 @@ public class PhysicsDamage : MonoBehaviour, ITakeDamage
     public void TakeDamage(Weapon weapon, Projectile projectile, Vector3 contactPoint)
     {
         rb.AddRelativeForce(projectile.transform.forward * weapon.GetShootingForce(), ForceMode.Impulse);
+        ScoreManager.instance.TunnelScore += targetPoints;
     }
 }

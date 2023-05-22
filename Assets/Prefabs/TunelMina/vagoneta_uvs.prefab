@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 2395972736388610410}
   - component: {fileID: 4013796842624692787}
   - component: {fileID: 468850587038233741}
+  - component: {fileID: 2763108359656068243}
   m_Layer: 0
   m_Name: vagoneta_uvs
   m_TagString: Cart
@@ -779,6 +780,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7552195, y: 0.9572211, z: 1.0831628}
   m_Center: {x: 0.0035650432, y: 0.28756985, z: -0.06535691}
+--- !u!95 &2763108359656068243
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029766064738591696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddbff41ab859da34b8de82edf6f7fb0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5033318397360836602
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class BottlesManager : MonoBehaviour
         if (ringsInScene <= 0)
         {
             GameManager.instance.IsPlaying = false;
+            ScoreManager.instance.CheckScoreForReward();
         }
     }
 }

@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        generalScoreText.text = ScoreManager.instance.RingsScore.ToString("00") + ScoreManager.instance.DartsScore.ToString("00") + ScoreManager.instance.TunnelScore.ToString("00");
+        generalScoreText.text = (ScoreManager.instance.RingsScore + ScoreManager.instance.DartsScore + ScoreManager.instance.TunnelScore).ToString("00");
         ringsScoreText.text = ScoreManager.instance.RingsScore.ToString("00");
         dartsScoreText.text = ScoreManager.instance.DartsScore.ToString("00");
         tunnelScoreText.text = ScoreManager.instance.TunnelScore.ToString("00");

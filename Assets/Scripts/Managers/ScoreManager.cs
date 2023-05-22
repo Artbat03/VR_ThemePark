@@ -51,11 +51,6 @@ public class ScoreManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-        CheckScoreForReward();
-    }
-
     public void CheckScoreForReward()
     {
         if (rewardsParent != null)

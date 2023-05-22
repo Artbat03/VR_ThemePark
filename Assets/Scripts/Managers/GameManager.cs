@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool isPlaying;
     [SerializeField] private string nameStand;
 
+    [Space(15), Header("SPAWN OBJECTS")]
+    [SerializeField] private Transform pistolTransform;
     [SerializeField] private GameObject rings;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
@@ -83,14 +85,17 @@ public class GameManager : MonoBehaviour
         if (standName == "RingsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
+            Instantiate(rings);
         }
         else if (standName == "DartsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
+            Instantiate(darts);
         }
         else if (standName == "TunnelStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
+            Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
         }
     }
     

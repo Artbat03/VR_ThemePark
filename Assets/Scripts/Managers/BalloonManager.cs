@@ -37,6 +37,7 @@ public class BalloonManager : MonoBehaviour
         if (dartsInScene <= 0)
         {
             GameManager.instance.IsPlaying = false;
+            ScoreManager.instance.CheckScoreForReward();
         }
     }
 }

@@ -23,21 +23,23 @@ public class BalloonManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-
-        dartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
     }
 
     private void Update()
     {
-        CheckDartsInScene();
+        if (GameManager.instance.isPlaying && dartsInScene >= 3)
+        {
+            CheckDartsInScene();
+        }
     }
 
     public void CheckDartsInScene()
     {
-        if (dartsInScene <= 0)
+        if (dartsInScene <= 0 && GameManager.instance.NameStand == "DartsStand")
         {
-            GameManager.instance.IsPlaying = false;
-            
+            GameManager.instance.isPlaying = false;
+            GameManager.instance.NameStand = null;
+
             if (!ScoreManager.instance.DartsToyReached)
             {
                 ScoreManager.instance.CheckScoreForReward();

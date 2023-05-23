@@ -20,20 +20,22 @@ public class BottlesManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-
-        ringsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
     }
 
     private void Update()
     {
-        CheckDartsInScene();
+        if (GameManager.instance.isPlaying && ringsInScene >= 3)
+        {
+            CheckRingsInScene();
+        }
     }
 
-    public void CheckDartsInScene()
+    public void CheckRingsInScene()
     {
-        if (ringsInScene <= 0)
+        if (ringsInScene <= 0 && GameManager.instance.NameStand == "RingsStand")
         {
-            GameManager.instance.IsPlaying = false;
+            GameManager.instance.isPlaying = false;
+            GameManager.instance.NameStand = null;
 
             if (!ScoreManager.instance.RingsToyReached)
             {

@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310111098}
   m_Layer: 0
-  m_Name: SnapTransform
+  m_Name: CartSnapTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +766,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerIn: 0
+  player: {fileID: 0}
+  worldTransform: {fileID: 0}
+  cartAnim: {fileID: 0}
   backBtn: {fileID: 1700050777861226217, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  randomInt: 0
+  enemiesToKillList: []
 --- !u!65 &468850587038233741
 BoxCollider:
   m_ObjectHideFlags: 0

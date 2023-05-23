@@ -15,11 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ActionBasedContinuousMoveProvider playerMovement;
     
     [Space(15), Header("GAME PLAYER TRANSFORMS")]
-    [SerializeField] private Transform gamePlayerTransformParent;
     [SerializeField] private List<Transform> gamePlayerTransforms;
     
     [Space(15), Header("STAND PARAMS")]
-    [SerializeField] private bool isPlaying;
+    public bool isPlaying;
     [SerializeField] private string nameStand;
 
     [Space(15), Header("SPAWN OBJECTS")]
@@ -30,11 +29,11 @@ public class GameManager : MonoBehaviour
     
     #region GETTERS && SETTERS
 
-    public bool IsPlaying
+    /*public bool IsPlaying
     {
         get => isPlaying;
         set => isPlaying = value;
-    }
+    }*/
 
     public string NameStand
     {
@@ -60,14 +59,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        
-        if (gamePlayerTransformParent != null)
-        {
-            for (int i = 0; i < gamePlayerTransformParent.childCount; i++)
-            {
-                gamePlayerTransforms.Add(gamePlayerTransformParent.GetChild(i));
-            }
-        }
     }
 
     private void Update()
@@ -77,23 +68,41 @@ public class GameManager : MonoBehaviour
 
     public void NameStandTransform(string standName)
     {
-        if (standName == "RingsStand")
+        NameStand = standName;
+        
+        if (standName == "RingsStandLevel1")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
             Instantiate(rings);
+            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+        }
+        else if (standName == "RingsStandLevel2")
+        {
+            _playerController.ResetPosition(gamePlayerTransforms[1]);
+            Instantiate(rings);
+            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+        }
+        else if (standName == "RingsStandLevel3")
+        {
+            _playerController.ResetPosition(gamePlayerTransforms[2]);
+            Instantiate(rings);
+            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
         }
         else if (standName == "DartsStand")
         {
-            _playerController.ResetPosition(gamePlayerTransforms[1]);
+            _playerController.ResetPosition(gamePlayerTransforms[3]);
             Instantiate(darts);
+            BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
         }
         else if (standName == "TunnelStand")
         {
-            _playerController.ResetPosition(gamePlayerTransforms[2]);
+            _playerController.ResetPosition(gamePlayerTransforms[4]);
             player.transform.SetParent(vagonetaTransform);
             GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
             gun.transform.SetParent(vagonetaTransform);
         }
+
+        isPlaying = true;
     }
     
     public void CheckPlay()

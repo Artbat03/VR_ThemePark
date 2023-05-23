@@ -3,28 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class CartDetection : MonoBehaviour
 {
     // Variables
-    [SerializeField] private GameObject player;
-    [SerializeField] private PlayerController _playerController;
-    [SerializeField] private Transform worldTransform;
-
-    [SerializeField] private Animator vagonetaAnim;
+    [Header("PLAYER PARAMS")]
     [SerializeField] private bool isPlayerIn;
+    [SerializeField] private GameObject player;
+    
+    [Space(15), Header("CART PARAMS")]
+    [SerializeField] private Transform worldTransform;
+    [SerializeField] private Animator cartAnim;
+    
+    [Space(15), Header("INPUT ACTIONS")]
     [SerializeField] private InputActionReference backBtn;
+
+    [Space(15), Header("ENEMIES PARAMS")]
+    [SerializeField] private int randomInt;
+    [SerializeField] private List<GameObject> enemiesToKillList;
 
     private void Awake()
     {
-        vagonetaAnim = GetComponent<Animator>();
+        cartAnim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (isPlayerIn && backBtn.action.IsPressed())
         {
-            GameManager.instance.IsPlaying = false;
+            GameManager.instance.isPlaying = false;
         }
     }
 
@@ -36,7 +44,7 @@ public class CartDetection : MonoBehaviour
             
             if (isPlayerIn)
             {
-                vagonetaAnim.SetTrigger("Accelerate");
+                cartAnim.SetTrigger("Accelerate");
             }
         }
     }
@@ -47,12 +55,23 @@ public class CartDetection : MonoBehaviour
         {
             isPlayerIn = false;
         }
+        else if (other.CompareTag("EnemyTrigger"))
+        {
+            RandomEnemy(other.transform);
+        }
+    }
+
+    public void RandomEnemy(Transform enemyTriggerTransform)
+    {
+        randomInt = Random.Range(0, enemiesToKillList.Count);
+        Instantiate(enemiesToKillList[randomInt], enemyTriggerTransform.GetChild(0).position, enemyTriggerTransform.GetChild(0).rotation);
     }
 
     public void PlayerOut()
     {
         isPlayerIn = false;
-        GameManager.instance.IsPlaying = false;
+        GameManager.instance.isPlaying = false;
+        GameManager.instance.NameStand = null;
         player.transform.SetParent(null);
         player.transform.position = worldTransform.position;
         player.transform.rotation = worldTransform.rotation;

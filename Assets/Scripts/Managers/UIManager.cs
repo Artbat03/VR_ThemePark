@@ -45,7 +45,6 @@ public class UIManager : MonoBehaviour
     public void Play(string standName)
     {
         gameCanvas.SetActive(true);
-        GameManager.instance.IsPlaying = true;
         GameManager.instance.NameStandTransform(standName);
     }
     

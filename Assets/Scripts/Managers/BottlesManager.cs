@@ -5,14 +5,26 @@ public class BottlesManager : MonoBehaviour
     // Variables
     public static BottlesManager instance;
     
-    [SerializeField] private int ringsInScene;
+    [SerializeField] private int pinkRingsInScene;
+    [SerializeField] private int yellowRingsInScene;
+    [SerializeField] private int blueRingsInScene;
     
     #region GETTERS && SETTERS
 
-    public int RingsInScene
+    public int PinkRingsInScene
     {
-        get => ringsInScene;
-        set => ringsInScene = value;
+        get => pinkRingsInScene;
+        set => pinkRingsInScene = value;
+    }
+    
+    public int YellowRingsInScene
+    {
+        get => yellowRingsInScene;
+        set => yellowRingsInScene = value;
+    }public int BlueRingsInScene
+    {
+        get => blueRingsInScene;
+        set => blueRingsInScene = value;
     }
 
     #endregion
@@ -24,7 +36,7 @@ public class BottlesManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.isPlaying && ringsInScene >= 3)
+        if (GameManager.instance.isPlaying)
         {
             CheckRingsInScene();
         }
@@ -32,7 +44,27 @@ public class BottlesManager : MonoBehaviour
 
     public void CheckRingsInScene()
     {
-        if (ringsInScene <= 0 && GameManager.instance.NameStand == "RingsStandLevel1" || GameManager.instance.NameStand == "RingsStandLevel2" || GameManager.instance.NameStand == "RingsStandLevel3")
+        if (pinkRingsInScene <= 0 && GameManager.instance.NameStand == "RingsStandLevel1")
+        {
+            GameManager.instance.isPlaying = false;
+            GameManager.instance.NameStand = null;
+
+            if (!ScoreManager.instance.RingsToyReached)
+            {
+                ScoreManager.instance.CheckScoreForReward();
+            }
+        }
+        else if (yellowRingsInScene <= 0 && GameManager.instance.NameStand == "RingsStandLevel2")
+        {
+            GameManager.instance.isPlaying = false;
+            GameManager.instance.NameStand = null;
+
+            if (!ScoreManager.instance.RingsToyReached)
+            {
+                ScoreManager.instance.CheckScoreForReward();
+            }
+        }
+        else if (blueRingsInScene <= 0 &&  GameManager.instance.NameStand == "RingsStandLevel3")
         {
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;

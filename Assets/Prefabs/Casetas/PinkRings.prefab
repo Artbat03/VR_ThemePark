@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8549173257333192526}
   m_Layer: 0
-  m_Name: Rings
+  m_Name: PinkRings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8549173257333192527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.899868, y: 1.011, z: -3.842}
+  m_LocalPosition: {x: 4.92, y: 1.011, z: -2.017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44,12 +44,7 @@ PrefabInstance:
     - target: {fileID: 8154338470294928400, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_Name
-      value: Ring_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928401, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
+      value: PinkRing_1
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
@@ -124,32 +119,12 @@ PrefabInstance:
     - target: {fileID: 8154338470294928400, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_Name
-      value: Ring_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928401, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
+      value: PinkRing_3
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
@@ -164,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.1119995
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
@@ -219,32 +194,12 @@ PrefabInstance:
     - target: {fileID: 8154338470294928400, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_Name
-      value: Ring_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928401, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_InteractionManager
-      value: 
+      value: PinkRing_2
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
@@ -259,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0280001
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8154338470294928410, guid: 557b5cdfbebbea6459a2a1b588063ad7,
         type: 3}

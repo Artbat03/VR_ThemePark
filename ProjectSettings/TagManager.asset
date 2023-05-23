@@ -16,6 +16,9 @@ TagManager:
   - LeftHand
   - RightHand
   - EnemyTrigger
+  - PinkRing
+  - YellowRing
+  - BlueRing
   layers:
   - Default
   - TransparentFX

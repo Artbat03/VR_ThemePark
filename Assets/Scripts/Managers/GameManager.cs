@@ -23,7 +23,9 @@ public class GameManager : MonoBehaviour
 
     [Space(15), Header("SPAWN OBJECTS")]
     [SerializeField] private Transform pistolTransform;
-    [SerializeField] private GameObject rings;
+    [SerializeField] private GameObject pinkRings;
+    [SerializeField] private GameObject yellowRings;
+    [SerializeField] private GameObject blueRings;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
     
@@ -73,20 +75,20 @@ public class GameManager : MonoBehaviour
         if (standName == "RingsStandLevel1")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
-            Instantiate(rings);
-            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+            Instantiate(pinkRings);
+            BottlesManager.instance.PinkRingsInScene = GameObject.FindGameObjectsWithTag("PinkRing").Length;
         }
         else if (standName == "RingsStandLevel2")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
-            Instantiate(rings);
-            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+            Instantiate(yellowRings);
+            BottlesManager.instance.YellowRingsInScene = GameObject.FindGameObjectsWithTag("YellowRing").Length;
         }
         else if (standName == "RingsStandLevel3")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
-            Instantiate(rings);
-            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+            Instantiate(blueRings);
+            BottlesManager.instance.BlueRingsInScene = GameObject.FindGameObjectsWithTag("BlueRing").Length;
         }
         else if (standName == "DartsStand")
         {

@@ -27,7 +27,7 @@ public class BalloonManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.isPlaying && dartsInScene >= 3)
+        if (GameManager.instance.isPlaying)
         {
             CheckDartsInScene();
         }

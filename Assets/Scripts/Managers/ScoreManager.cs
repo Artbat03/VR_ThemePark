@@ -74,6 +74,13 @@ public class ScoreManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        ringsScore = PlayerPrefs.GetInt("RingsScore", 0);
+        dartsScore = PlayerPrefs.GetInt("DartsScore", 0);
+        tunnelScore = PlayerPrefs.GetInt("TunnelScore", 0);
+    }
+
     public void CheckScoreForReward()
     {
         if (rewardsParent != null)

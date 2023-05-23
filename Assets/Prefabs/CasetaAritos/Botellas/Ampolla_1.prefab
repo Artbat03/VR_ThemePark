@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4130925251571236292}
   - component: {fileID: 1079778917869892193}
   - component: {fileID: 2961348191884658347}
+  - component: {fileID: 6019111128907644945}
+  - component: {fileID: 5351106723939235716}
   m_Layer: 0
   m_Name: Ampolla_1
   m_TagString: Untagged
@@ -83,3 +85,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &6019111128907644945
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609685737645565822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05651836
+  m_Height: 0.2559008
+  m_Direction: 1
+  m_Center: {x: 0.000000007450581, y: -0.053325742, z: 0.000000014901161}
+--- !u!136 &5351106723939235716
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609685737645565822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.020559475
+  m_Height: 0.113728285
+  m_Direction: 1
+  m_Center: {x: 0.000000007450581, y: 0.096358895, z: 0.000000014901161}

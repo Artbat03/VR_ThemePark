@@ -32,7 +32,7 @@ public class BottlesManager : MonoBehaviour
 
     public void CheckRingsInScene()
     {
-        if (ringsInScene <= 0 && GameManager.instance.NameStand == "RingsStand")
+        if (ringsInScene <= 0 && GameManager.instance.NameStand == "RingsStandLevel1" || GameManager.instance.NameStand == "RingsStandLevel2" || GameManager.instance.NameStand == "RingsStandLevel3")
         {
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;

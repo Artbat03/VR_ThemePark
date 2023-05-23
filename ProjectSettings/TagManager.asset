@@ -15,7 +15,6 @@ TagManager:
   - Button
   - LeftHand
   - RightHand
-  - SnapCart
   - EnemyTrigger
   layers:
   - Default

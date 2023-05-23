@@ -437,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 265.50003, y: 0}
   m_SizeDelta: {x: 131.64, y: 46.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218227280
@@ -3252,7 +3252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 539, y: 0}
   m_SizeDelta: {x: 131.64, y: 46.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282250497
@@ -4792,8 +4792,12 @@ MonoBehaviour:
   vagonetaTransform: {fileID: 1314740234}
   _playerController: {fileID: 4526567955848547597}
   playerMovement: {fileID: 4526567955848547602}
-  gamePlayerTransformParent: {fileID: 403114443}
-  gamePlayerTransforms: []
+  gamePlayerTransforms:
+  - {fileID: 607782622}
+  - {fileID: 576336438}
+  - {fileID: 1150213394}
+  - {fileID: 266029339}
+  - {fileID: 6621504109831384169}
   isPlaying: 0
   nameStand: 
   pistolTransform: {fileID: 592194903}
@@ -5969,10 +5973,11 @@ PrefabInstance:
       propertyPath: worldTransform
       value: 
       objectReference: {fileID: 1239096453}
-    - target: {fileID: 4013796842624692787, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
-        type: 3}
-      propertyPath: _playerController
-      value: 
-      objectReference: {fileID: 4526567955848547597}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71cf354821bd28b4d835b80f9dd0a9c9, type: 3}
+--- !u!4 &6621504109831384169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1310111098, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6621504109831384168}
+  m_PrefabAsset: {fileID: 0}

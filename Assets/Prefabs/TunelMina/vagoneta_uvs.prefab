@@ -771,7 +771,11 @@ MonoBehaviour:
   cartAnim: {fileID: 0}
   backBtn: {fileID: 1700050777861226217, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   randomInt: 0
-  enemiesToKillList: []
+  enemiesToKillList:
+  - {fileID: 1226048405349618067, guid: 50dbc10a0ddd4204fb2f1a9f96f05d42, type: 3}
+  - {fileID: 6234582818682742942, guid: 9140bd6e6886a1246959d6e68f2e6935, type: 3}
+  - {fileID: 1948241470461554930, guid: 057f6010c7a20974185dd0abfebe9f3e, type: 3}
+  - {fileID: 6262946694387195227, guid: 1b05c6ffdfe8a1c40ab2cf1d67e7337b, type: 3}
 --- !u!65 &468850587038233741
 BoxCollider:
   m_ObjectHideFlags: 0

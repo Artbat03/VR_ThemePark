@@ -47,6 +47,10 @@ public class CartDetection : MonoBehaviour
                 cartAnim.SetTrigger("Accelerate");
             }
         }
+        else if (other.CompareTag("EnemyTrigger"))
+        {
+            RandomEnemy(other.transform);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -54,10 +58,6 @@ public class CartDetection : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerIn = false;
-        }
-        else if (other.CompareTag("EnemyTrigger"))
-        {
-            RandomEnemy(other.transform);
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,7 +17,9 @@ public class PhysicsDamage : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(Weapon weapon, Projectile projectile, Vector3 contactPoint)
     {
+        rb.useGravity = true;
         rb.AddRelativeForce(projectile.transform.forward * weapon.GetShootingForce(), ForceMode.Impulse);
         ScoreManager.instance.TunnelScore += targetPoints;
+        Destroy(gameObject);
     }
 }

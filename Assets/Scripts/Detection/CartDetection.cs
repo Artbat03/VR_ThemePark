@@ -26,6 +26,7 @@ public class CartDetection : MonoBehaviour
     private void Awake()
     {
         cartAnim = GetComponent<Animator>();
+        randomInt = Random.Range(0, enemiesToKillList.Count);
     }
 
     private void Update()

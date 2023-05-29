@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9094311777717525577}
   - component: {fileID: 5303736184265905132}
   - component: {fileID: 7961889961360156454}
+  - component: {fileID: -235003803994202240}
+  - component: {fileID: 1744476231938026486}
   m_Layer: 0
   m_Name: GloboAgua_1
   m_TagString: Untagged
@@ -83,3 +85,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &-235003803994202240
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466394343038600947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1454261
+  m_Center: {x: 0.025142848, y: 0.015144646, z: -0.0029001236}
+--- !u!114 &1744476231938026486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466394343038600947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b70b2130fd7e9c4b83a508ea885679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 1
+  frontBool: 0
+  backBool: 0

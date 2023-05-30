@@ -26,4 +26,12 @@ public class PlayerController : MonoBehaviour
         var distanceDiff = pos.position - playerHead.transform.position;
         player.transform.position += new Vector3(distanceDiff.x, player.transform.position.y, distanceDiff.z);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Cart"))
+        {
+            ResetPosition(GameManager.instance.gamePlayerTransforms[4]);
+        }
+    }
 }

@@ -19,6 +19,8 @@ TagManager:
   - PinkRing
   - YellowRing
   - BlueRing
+  - LeverOn
+  - LeverOff
   layers:
   - Default
   - TransparentFX

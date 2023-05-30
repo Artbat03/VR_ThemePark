@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ActionBasedContinuousMoveProvider playerMovement;
     
     [Space(15), Header("GAME PLAYER TRANSFORMS")]
-    [SerializeField] private List<Transform> gamePlayerTransforms;
+    public List<Transform> gamePlayerTransforms;
     
     [Space(15), Header("STAND PARAMS")]
     public bool isPlaying;
@@ -30,12 +30,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pistol;
     
     #region GETTERS && SETTERS
-
-    /*public bool IsPlaying
-    {
-        get => isPlaying;
-        set => isPlaying = value;
-    }*/
 
     public string NameStand
     {
@@ -98,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
         else if (standName == "TunnelStand")
         {
-            _playerController.ResetPosition(gamePlayerTransforms[4]);
+            //_playerController.ResetPosition(gamePlayerTransforms[4]);
             player.transform.SetParent(vagonetaTransform);
             GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
             gun.transform.SetParent(vagonetaTransform);

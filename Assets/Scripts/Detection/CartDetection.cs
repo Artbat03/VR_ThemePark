@@ -43,7 +43,7 @@ public class CartDetection : MonoBehaviour
         {
             isPlayerIn = true;
             
-            if (isPlayerIn)
+            if (GameManager.instance.isPlaying)
             {
                 cartAnim.SetTrigger("Accelerate");
             }

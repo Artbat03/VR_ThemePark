@@ -49,6 +49,8 @@ public class BottlesManager : MonoBehaviour
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;
 
+            AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
+            
             if (!ScoreManager.instance.RingsToyReached)
             {
                 ScoreManager.instance.CheckScoreForReward();
@@ -58,7 +60,9 @@ public class BottlesManager : MonoBehaviour
         {
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;
-
+            
+            AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
+            
             if (!ScoreManager.instance.RingsToyReached)
             {
                 ScoreManager.instance.CheckScoreForReward();
@@ -69,6 +73,8 @@ public class BottlesManager : MonoBehaviour
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;
 
+            AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
+            
             if (!ScoreManager.instance.RingsToyReached)
             {
                 ScoreManager.instance.CheckScoreForReward();

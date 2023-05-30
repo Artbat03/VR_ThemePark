@@ -70,6 +70,7 @@ public class CartDetection : MonoBehaviour
 
     public void PlayerOut()
     {
+        AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
         isPlayerIn = false;
         GameManager.instance.isPlaying = false;
         GameManager.instance.NameStand = null;

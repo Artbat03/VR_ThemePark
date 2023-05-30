@@ -1869,7 +1869,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4526567955848547603}
         m_TargetAssemblyTypeName: VibrateController, Assembly-CSharp
-        m_MethodName: SetLeftHandTrue
+        m_MethodName: SetRightHandFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

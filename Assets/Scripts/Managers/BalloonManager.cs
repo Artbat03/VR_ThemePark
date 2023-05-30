@@ -39,7 +39,9 @@ public class BalloonManager : MonoBehaviour
         {
             GameManager.instance.isPlaying = false;
             GameManager.instance.NameStand = null;
-
+            
+            AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
+            
             if (!ScoreManager.instance.DartsToyReached)
             {
                 ScoreManager.instance.CheckScoreForReward();

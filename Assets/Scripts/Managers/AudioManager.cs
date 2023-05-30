@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource musicVagoneta;
 
     public AudioClip[] listaAudio;
     private void OnValidate()
@@ -38,5 +39,11 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+    
+    public void PlayMusicVagoneta(AudioClip clip)
+    {
+        musicVagoneta.clip = clip;
+        musicVagoneta.Play();
     }
 }

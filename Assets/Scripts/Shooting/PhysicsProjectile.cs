@@ -23,7 +23,7 @@ public class PhysicsProjectile : Projectile
         base.Launch();
         rb.AddRelativeForce(Vector3.forward * _weapon.GetShootingForce(), ForceMode.Impulse);
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);

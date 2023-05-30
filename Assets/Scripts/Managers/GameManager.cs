@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
         else if (standName == "TunnelStand")
         {
-            //_playerController.ResetPosition(gamePlayerTransforms[4]);
+            _playerController.ResetPosition(gamePlayerTransforms[4]);
             player.transform.SetParent(vagonetaTransform);
             GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
             gun.transform.SetParent(vagonetaTransform);

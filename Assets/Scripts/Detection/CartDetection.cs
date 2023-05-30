@@ -23,10 +23,14 @@ public class CartDetection : MonoBehaviour
     [SerializeField] private int randomInt;
     [SerializeField] private List<GameObject> enemiesToKillList;
 
+    [Space(15), Header("SCRIPT REFERENCES")]
+    [SerializeField] private LeverDetection _leverDetection;
+
     private void Awake()
     {
         cartAnim = GetComponent<Animator>();
         randomInt = Random.Range(0, enemiesToKillList.Count);
+        _leverDetection = FindObjectOfType<LeverDetection>();
     }
 
     private void Update()
@@ -43,7 +47,7 @@ public class CartDetection : MonoBehaviour
         {
             isPlayerIn = true;
             
-            if (GameManager.instance.isPlaying)
+            if (isPlayerIn)
             {
                 cartAnim.SetTrigger("Accelerate");
             }
@@ -77,5 +81,6 @@ public class CartDetection : MonoBehaviour
         player.transform.SetParent(null);
         player.transform.position = worldTransform.position;
         player.transform.rotation = worldTransform.rotation;
+        _leverDetection.ResetLeverTransform();
     }
 }

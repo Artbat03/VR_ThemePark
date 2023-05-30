@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1466825054631222201}
   - component: {fileID: 7108204204765765712}
   - component: {fileID: 4703098236981878456}
+  - component: {fileID: 7009494706765251700}
   m_Layer: 0
   m_Name: palo
   m_TagString: Untagged
@@ -116,6 +117,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7009494706765251700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098096435361800039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13017702, y: 2.0022273, z: 0.061537385}
+  m_Center: {x: 0.00000019744037, y: 0.16308671, z: -0.000000047497448}
 --- !u!1 &5350371152516630532
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +141,7 @@ GameObject:
   - component: {fileID: 6090844269907631377}
   - component: {fileID: 370199284604726648}
   - component: {fileID: 5582966051255807486}
+  - component: {fileID: 16138228725318569}
   m_Layer: 0
   m_Name: letrero
   m_TagString: Untagged
@@ -199,3 +214,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &16138228725318569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350371152516630532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91218686, y: 0.56531423, z: 0.04575275}
+  m_Center: {x: 0.00000023841858, y: 0, z: -0.013045144}

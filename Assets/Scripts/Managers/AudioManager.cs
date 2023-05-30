@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
 
+    public AudioClip[] listaAudio;
     private void OnValidate()
     {
         if (musicSource == null)

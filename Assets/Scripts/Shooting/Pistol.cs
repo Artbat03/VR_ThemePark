@@ -17,6 +17,9 @@ public class Pistol : Weapon
         base.Shoot();
         Projectile projectileInstance = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         projectileInstance.Init(this);
+        // Sonido y vibration
+        AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[0]);
+        VibrateController.instance.sendVibration(0.35f,0.02f);
         projectileInstance.Launch();
     }
 

@@ -19,7 +19,7 @@ public class Pistol : Weapon
         projectileInstance.Init(this);
         // Sonido y vibration
         AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[0]);
-        VibrateController.instance.sendVibration(0.35f,0.02f);
+        VibrateController.instance.sendVibration(0.45f,0.02f);
         projectileInstance.Launch();
     }
 

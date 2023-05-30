@@ -1,17 +1,32 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class LeverDetection : MonoBehaviour
 {
     // Variables
+    [Header("UNITY EVENT")]
+    [Space(10)]
     public UnityEvent leverOn;
+    
+    [Space(15), Header("LEVER TRANSFORM PARAMS")]
     [SerializeField] private Transform leverTransform;
     [SerializeField] private Vector3 leverPos;
     [SerializeField] private Quaternion leverRot;
+    
+    [Space(15), Header("MESH && MATERIALS PARAMS")]
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Material leverOriginalMat;
+    [SerializeField] private Material leverActivateMat;
 
     private void Awake()
     {
+        // Capturing Mesh Renderer && Setting Default Mat
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = leverOriginalMat;
+        
+        // Capturing the lever starter position
         leverTransform = gameObject.transform;
         leverPos = leverTransform.position;
         leverRot = leverTransform.rotation;
@@ -21,11 +36,13 @@ public class LeverDetection : MonoBehaviour
     {
         if (other.CompareTag("LeverOn"))
         {
-            leverOn.Invoke();
+            meshRenderer.material = leverActivateMat;
+            StartCoroutine(Coroutine_StartTunnel()); 
+            ResetLeverTransform();
         }
         else if (other.CompareTag("LeverOff"))
         {
-            
+            meshRenderer.material = leverOriginalMat;
         }
     }
 
@@ -33,5 +50,12 @@ public class LeverDetection : MonoBehaviour
     {
         gameObject.transform.position = leverPos;
         gameObject.transform.rotation = leverRot;
+        meshRenderer.material = leverOriginalMat;
+    }
+
+    IEnumerator Coroutine_StartTunnel()
+    {
+        yield return new WaitForSeconds(0.5f);
+        leverOn.Invoke();
     }
 }

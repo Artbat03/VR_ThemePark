@@ -243,7 +243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2545100594518960470, guid: b12752aeca3f5be4f959dc09e5bfcecd, type: 3}
+  - {fileID: 2100000, guid: eb11ab5ab92669f4dbf0804ef9dc19d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -460,6 +460,12 @@ MonoBehaviour:
           m_StringArgument: TunnelStand
           m_BoolArgument: 0
         m_CallState: 2
+  leverTransform: {fileID: 0}
+  leverPos: {x: 0, y: 0, z: 0}
+  leverRot: {x: 0, y: 0, z: 0, w: 0}
+  meshRenderer: {fileID: 0}
+  leverOriginalMat: {fileID: 2100000, guid: eb11ab5ab92669f4dbf0804ef9dc19d7, type: 2}
+  leverActivateMat: {fileID: 2100000, guid: 4085bc56f99c8da4596fc64499e76c08, type: 2}
 --- !u!1 &8204833614941905756
 GameObject:
   m_ObjectHideFlags: 0

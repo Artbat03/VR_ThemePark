@@ -39,6 +39,14 @@ public class CartDetection : MonoBehaviour
         {
             GameManager.instance.isPlaying = false;
         }
+
+        if (!isPlayerIn)
+        {
+            foreach (var target in GameObject.FindGameObjectsWithTag("Target"))
+            {
+                Destroy(target);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,6 +64,10 @@ public class CartDetection : MonoBehaviour
         {
             RandomEnemy(other.transform);
         }
+        else if (other.CompareTag("TunnelOut"))
+        {
+            isPlayerIn = false;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -65,17 +77,25 @@ public class CartDetection : MonoBehaviour
             isPlayerIn = false;
         }
     }
-
+    
+    /// <summary>
+    /// Method for spawn a random enemy from a list in a specific transform
+    /// </summary>
+    /// <param name="enemyTriggerTransform"></param>
     public void RandomEnemy(Transform enemyTriggerTransform)
     {
         randomInt = Random.Range(0, enemiesToKillList.Count);
         Instantiate(enemiesToKillList[randomInt], enemyTriggerTransform.GetChild(0).position, enemyTriggerTransform.GetChild(0).rotation);
     }
-
+    
+    /// <summary>
+    /// Method for when the cart animation finishes
+    /// </summary>
     public void PlayerOut()
     {
-        AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
         isPlayerIn = false;
+        
+        AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
         GameManager.instance.isPlaying = false;
         GameManager.instance.NameStand = null;
         player.transform.SetParent(null);

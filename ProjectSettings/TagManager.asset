@@ -21,6 +21,9 @@ TagManager:
   - BlueRing
   - LeverOn
   - LeverOff
+  - Pistol
+  - TunnelOut
+  - Target
   layers:
   - Default
   - TransparentFX

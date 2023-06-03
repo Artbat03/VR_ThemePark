@@ -12,37 +12,15 @@ public class ObjectDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PinkRing"))
+        if (other.CompareTag("Ring"))
         {
             if (frontBool && backBool)
             {
                 ScoreManager.instance.RingsScore += points;
                 PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
-                BottlesManager.instance.PinkRingsInScene--;
+                BottlesManager.instance.RingsInScene--;
                 other.GetComponent<DestroyObject>().DestroyObj();
-                Debug.Log("Pink Ring Points");
-            }
-        }
-        else if (other.CompareTag("YellowRing"))
-        {
-            if (frontBool && backBool)
-            {
-                ScoreManager.instance.RingsScore += points;
-                PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
-                BottlesManager.instance.YellowRingsInScene--;
-                other.GetComponent<DestroyObject>().DestroyObj();
-                Debug.Log("Yellow Ring Points");
-            }
-        }
-        else if (other.CompareTag("BlueRing"))
-        {
-            if (frontBool && backBool)
-            {
-                ScoreManager.instance.RingsScore += points;
-                PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
-                BottlesManager.instance.BlueRingsInScene--;
-                other.GetComponent<DestroyObject>().DestroyObj();
-                Debug.Log("Blue Ring Points");
+                Debug.Log("Ring Points");
             }
         }
         else if (other.CompareTag("Dart"))

@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 7083195194120373138}
   m_Layer: 0
   m_Name: YellowRing
-  m_TagString: YellowRing
+  m_TagString: Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

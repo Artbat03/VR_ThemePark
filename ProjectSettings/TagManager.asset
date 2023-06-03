@@ -16,9 +16,6 @@ TagManager:
   - LeftHand
   - RightHand
   - EnemyTrigger
-  - PinkRing
-  - YellowRing
-  - BlueRing
   - LeverOn
   - LeverOff
   - Pistol

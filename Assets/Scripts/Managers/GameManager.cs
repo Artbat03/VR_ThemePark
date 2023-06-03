@@ -23,9 +23,7 @@ public class GameManager : MonoBehaviour
 
     [Space(15), Header("SPAWN OBJECTS")]
     [SerializeField] private Transform pistolTransform;
-    [SerializeField] private GameObject pinkRings;
-    [SerializeField] private GameObject yellowRings;
-    [SerializeField] private GameObject blueRings;
+    [SerializeField] private GameObject rings;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
     
@@ -69,30 +67,18 @@ public class GameManager : MonoBehaviour
         if (standName == "RingsStandLevel1")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
-            Instantiate(pinkRings);
-            BottlesManager.instance.PinkRingsInScene = GameObject.FindGameObjectsWithTag("PinkRing").Length;
-        }
-        else if (standName == "RingsStandLevel2")
-        {
-            _playerController.ResetPosition(gamePlayerTransforms[1]);
-            Instantiate(yellowRings);
-            BottlesManager.instance.YellowRingsInScene = GameObject.FindGameObjectsWithTag("YellowRing").Length;
-        }
-        else if (standName == "RingsStandLevel3")
-        {
-            _playerController.ResetPosition(gamePlayerTransforms[2]);
-            Instantiate(blueRings);
-            BottlesManager.instance.BlueRingsInScene = GameObject.FindGameObjectsWithTag("BlueRing").Length;
+            Instantiate(rings);
+            BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
         }
         else if (standName == "DartsStand")
         {
-            _playerController.ResetPosition(gamePlayerTransforms[3]);
+            _playerController.ResetPosition(gamePlayerTransforms[1]);
             Instantiate(darts);
             BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
         }
         else if (standName == "TunnelStand")
         {
-            _playerController.ResetPosition(gamePlayerTransforms[4]);
+            _playerController.ResetPosition(gamePlayerTransforms[2]);
             player.transform.SetParent(vagonetaTransform);
             GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
             gun.transform.SetParent(vagonetaTransform);

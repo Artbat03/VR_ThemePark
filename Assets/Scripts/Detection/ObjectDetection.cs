@@ -2,19 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ObjectDetection : MonoBehaviour
 {
     // Variables
     [SerializeField] private int points;
-    public bool frontBool;
-    public bool backBool;
+    public bool objectDroppedBool;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ring"))
         {
-            if (frontBool && backBool)
+            if (objectDroppedBool)
             {
                 ScoreManager.instance.RingsScore += points;
                 PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);

@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string nameStand;
 
     [Space(15), Header("SPAWN OBJECTS")]
+    [SerializeField] private Transform gameTransform;
     [SerializeField] private Transform pistolTransform;
+    [SerializeField] private GameObject gamePrefab;
     [SerializeField] private GameObject rings;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
@@ -69,6 +71,8 @@ public class GameManager : MonoBehaviour
             _playerController.ResetPosition(gamePlayerTransforms[0]);
             Instantiate(rings);
             BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+            GameObject game = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
+            game.transform.SetParent(gameTransform);
         }
         else if (standName == "DartsStand")
         {

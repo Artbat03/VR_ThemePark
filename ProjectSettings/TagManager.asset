@@ -21,6 +21,8 @@ TagManager:
   - Pistol
   - TunnelOut
   - Target
+  - Game
+  - Table
   layers:
   - Default
   - TransparentFX

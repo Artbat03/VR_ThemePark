@@ -43,6 +43,8 @@ public class BottlesManager : MonoBehaviour
             {
                 ScoreManager.instance.CheckScoreForReward();
             }
+            
+            Destroy(GameObject.FindGameObjectWithTag("Game").gameObject);
         }
     }
 }

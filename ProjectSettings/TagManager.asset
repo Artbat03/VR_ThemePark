@@ -23,6 +23,7 @@ TagManager:
   - Target
   - Game
   - Table
+  - BalloonsWall
   layers:
   - Default
   - TransparentFX

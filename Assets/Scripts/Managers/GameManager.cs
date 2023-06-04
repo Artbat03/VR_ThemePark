@@ -23,9 +23,11 @@ public class GameManager : MonoBehaviour
 
     [Space(15), Header("SPAWN OBJECTS")]
     [SerializeField] private Transform gameTransform;
+    [SerializeField] private Transform balloonsTransform;
     [SerializeField] private Transform pistolTransform;
     [SerializeField] private GameObject gamePrefab;
     [SerializeField] private GameObject rings;
+    [SerializeField] private GameObject balloonsWall;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
     
@@ -71,21 +73,20 @@ public class GameManager : MonoBehaviour
             _playerController.ResetPosition(gamePlayerTransforms[0]);
             Instantiate(rings);
             BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
-            GameObject game = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
-            game.transform.SetParent(gameTransform);
+            Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation, gameTransform);
         }
         else if (standName == "DartsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
             Instantiate(darts);
             BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
+            Instantiate(balloonsWall, balloonsTransform);
         }
         else if (standName == "TunnelStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
             player.transform.SetParent(vagonetaTransform);
-            GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
-            gun.transform.SetParent(vagonetaTransform);
+            Instantiate(pistol, pistolTransform.position, pistolTransform.rotation, vagonetaTransform);
         }
 
         isPlaying = true;

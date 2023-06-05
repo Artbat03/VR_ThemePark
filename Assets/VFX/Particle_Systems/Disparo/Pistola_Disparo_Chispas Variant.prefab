@@ -69,6 +69,16 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: 2a331e7b28494fb48a26532d9467298d, type: 3}
     - target: {fileID: 1535342821453138481, guid: 299d838f4be080342a8b640821893afc,
         type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535342821453138481, guid: 299d838f4be080342a8b640821893afc,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535342821453138481, guid: 299d838f4be080342a8b640821893afc,
+        type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.20198467
       objectReference: {fileID: 0}
@@ -105,7 +115,7 @@ PrefabInstance:
     - target: {fileID: 5026413480713261472, guid: 299d838f4be080342a8b640821893afc,
         type: 3}
       propertyPath: m_Name
-      value: Pistola_Disparo_Chispas
+      value: Pistola_Disparo_Chispas Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 299d838f4be080342a8b640821893afc, type: 3}

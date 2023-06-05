@@ -36,6 +36,7 @@ Transform:
   - {fileID: 1214714412511344721}
   - {fileID: 2923515494789199141}
   - {fileID: 2923515494698403409}
+  - {fileID: 8494532872964016829}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -188,6 +189,7 @@ MonoBehaviour:
   recoilForce: 2
   bulletPrefab: {fileID: 6229724465874203229, guid: b411e3a98058f994199171da1779b51c,
     type: 3}
+  particleSystem: {fileID: 3750446937694937129}
 --- !u!1 &2923515494698403414
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,3 +631,89 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &4043485864109810598
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3393691736207980724}
+    m_Modifications:
+    - target: {fileID: 869506328611390351, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistola_Disparo_Chispas Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 869506328611390351, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.065
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1411
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37c53455fba36d54c835a4ad89496c12, type: 3}
+--- !u!1 &3750446937694937129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 869506328611390351, guid: 37c53455fba36d54c835a4ad89496c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 4043485864109810598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8494532872964016829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5620488332073117979, guid: 37c53455fba36d54c835a4ad89496c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 4043485864109810598}
+  m_PrefabAsset: {fileID: 0}

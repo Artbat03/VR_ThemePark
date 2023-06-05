@@ -9,7 +9,13 @@ public class ObjectDetection : MonoBehaviour
     // Variables
     [SerializeField] private int points;
     public bool objectDroppedBool;
-    public bool isGlass;
+    [SerializeField] private bool isGlass;
+    [SerializeField] private ParticleSystem particleSystem;
+
+    private void Awake()
+    {
+        particleSystem.Stop();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +34,7 @@ public class ObjectDetection : MonoBehaviour
                 
                 ScoreManager.instance.RingsScore += points;
                 PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
-                
+
                 if (other.CompareTag("Ring"))
                 {
                     other.GetComponent<DestroyObject>().DestroyObj();
@@ -44,7 +50,15 @@ public class ObjectDetection : MonoBehaviour
             other.GetComponent<DestroyObject>().DestroyObj();
             Debug.Log("Dart points");
             
-            Destroy(this.gameObject);
+            particleSystem.Play();
+
+            StartCoroutine(Coroutine_Destroy());
         }
+    }
+
+    IEnumerator Coroutine_Destroy()
+    {
+        yield return new WaitForSeconds(.15f);
+        Destroy(this.gameObject);
     }
 }

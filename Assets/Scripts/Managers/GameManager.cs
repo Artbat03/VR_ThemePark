@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class GameManager : MonoBehaviour
@@ -31,8 +32,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
 
-    public GameObject spawnedRingGameObject;
+    public GameObject spawnedRingsGameObject;
     public GameObject spawnedDartsGameObject;
+    public GameObject spawnedRingGameGameObject;
+    public GameObject spawnedDartGameGameObject;
     public GameObject spawnedGunGameObject;
     
     #region GETTERS && SETTERS
@@ -75,18 +78,18 @@ public class GameManager : MonoBehaviour
         if (standName == "RingsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
-            Instantiate(rings);
+            spawnedRingsGameObject = Instantiate(rings);
             BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
-            spawnedRingGameObject = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
-            spawnedRingGameObject.transform.SetParent(gameTransform);
+            spawnedRingGameGameObject = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
+            spawnedRingGameGameObject.transform.SetParent(gameTransform);
         }
         else if (standName == "DartsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
-            Instantiate(darts);
+            spawnedDartsGameObject = Instantiate(darts);
             BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
-            spawnedDartsGameObject = Instantiate(balloonsWall);
-            spawnedDartsGameObject.transform.SetParent(balloonsTransform);
+            spawnedDartGameGameObject = Instantiate(balloonsWall);
+            spawnedDartGameGameObject.transform.SetParent(balloonsTransform);
         }
         else if (standName == "TunnelStand")
         {

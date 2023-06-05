@@ -29,7 +29,8 @@ public class BalloonManager : MonoBehaviour
     {
         if (GameManager.instance.isPlaying)
         {
-            CheckDartsInScene();
+            dartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
+            Invoke("CheckDartsInScene", 1f);
         }
     }
 
@@ -47,6 +48,7 @@ public class BalloonManager : MonoBehaviour
                 ScoreManager.instance.CheckScoreForReward();
             }
             
+            Destroy(GameManager.instance.spawnedDartGameGameObject.gameObject);
             Destroy(GameManager.instance.spawnedDartsGameObject.gameObject);
         }
     }

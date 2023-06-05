@@ -26,7 +26,8 @@ public class BottlesManager : MonoBehaviour
     {
         if (GameManager.instance.isPlaying)
         {
-            CheckRingsInScene();
+            ringsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
+            Invoke("CheckRingsInScene", 1f);
         }
     }
 
@@ -44,7 +45,8 @@ public class BottlesManager : MonoBehaviour
                 ScoreManager.instance.CheckScoreForReward();
             }
             
-            Destroy(GameManager.instance.spawnedRingGameObject.gameObject);
+            Destroy(GameManager.instance.spawnedRingGameGameObject.gameObject);
+            Destroy(GameManager.instance.spawnedRingsGameObject.gameObject);
         }
     }
 }

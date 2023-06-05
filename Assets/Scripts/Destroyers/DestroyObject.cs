@@ -14,16 +14,6 @@ public class DestroyObject : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Table"))
         {
-            if (this.gameObject.CompareTag("Ring"))
-            {
-                BottlesManager.instance.RingsInScene--;
-            }
-            
-            if (this.gameObject.CompareTag("Dart"))
-            {
-                BalloonManager.instance.DartsInScene--;
-            }
-            
             DestroyObj();
         }
     }

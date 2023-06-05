@@ -21,7 +21,6 @@ public class ObjectDetection : MonoBehaviour
                 
                 if (other.CompareTag("Ring"))
                 {
-                    BottlesManager.instance.RingsInScene--;
                     other.GetComponent<DestroyObject>().DestroyObj();
                 }
                 Debug.Log("Ring Points");
@@ -31,7 +30,6 @@ public class ObjectDetection : MonoBehaviour
         {
             ScoreManager.instance.DartsScore += points;
             PlayerPrefs.SetInt("DartsScore", ScoreManager.instance.DartsScore);
-            BalloonManager.instance.DartsInScene--;
             other.GetComponent<DestroyObject>().DestroyObj();
             Debug.Log("Dart points");
             

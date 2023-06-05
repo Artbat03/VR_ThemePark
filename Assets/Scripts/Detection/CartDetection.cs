@@ -57,6 +57,8 @@ public class CartDetection : MonoBehaviour
             
             if (isPlayerIn)
             {
+                AudioManager.instance.PlayMusicVagoneta(AudioManager.instance.listaAudio[5]);
+                gameObject.GetComponent<CartVibration>().enabled = true;
                 cartAnim.SetTrigger("Accelerate");
             }
         }
@@ -96,6 +98,9 @@ public class CartDetection : MonoBehaviour
         isPlayerIn = false;
         
         AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[1]);
+        gameObject.GetComponent<CartVibration>().StopSendHaptics();
+        gameObject.GetComponent<CartVibration>().enabled = false;
+        AudioManager.instance.StopMusicVagoneta();
         GameManager.instance.isPlaying = false;
         GameManager.instance.NameStand = null;
         player.transform.SetParent(null);

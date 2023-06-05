@@ -46,4 +46,8 @@ public class AudioManager : MonoBehaviour
         musicVagoneta.clip = clip;
         musicVagoneta.Play();
     }
+    public void StopMusicVagoneta()
+    {
+        musicVagoneta.Stop();
+    }
 }

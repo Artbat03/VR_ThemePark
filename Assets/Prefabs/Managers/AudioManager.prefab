@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 5499367202881321163}
   sfxSource: {fileID: 5499367203861429469}
-  musicVagoneta: {fileID: 0}
+  musicVagoneta: {fileID: 486478990623810981}
   listaAudio:
   - {fileID: 8300000, guid: 706c2d5d05b254b4fbc96be9beadbda0, type: 3}
   - {fileID: 8300000, guid: 957a6b37fabdf4744845e5abebd99faf, type: 3}

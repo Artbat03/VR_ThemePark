@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 4013796842624692787}
   - component: {fileID: 468850587038233741}
   - component: {fileID: 2763108359656068243}
+  - component: {fileID: 540587523709369337}
   m_Layer: 0
   m_Name: vagoneta_uvs
   m_TagString: Cart
@@ -841,6 +842,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &540587523709369337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029766064738591696}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159fe5080984f144cba02b5052edbf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller_l: {fileID: 0}
+  controller_r: {fileID: 0}
 --- !u!1 &5033318397360836602
 GameObject:
   m_ObjectHideFlags: 0

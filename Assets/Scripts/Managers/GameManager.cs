@@ -68,25 +68,28 @@ public class GameManager : MonoBehaviour
     {
         NameStand = standName;
         
-        if (standName == "RingsStandLevel1")
+        if (standName == "RingsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[0]);
             Instantiate(rings);
             BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
-            Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation, gameTransform);
+            GameObject ringGame = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
+            ringGame.transform.SetParent(gameTransform);
         }
         else if (standName == "DartsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
             Instantiate(darts);
             BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
-            Instantiate(balloonsWall, balloonsTransform);
+            GameObject dartsGame = Instantiate(balloonsWall);
+            dartsGame.transform.SetParent(balloonsTransform);
         }
         else if (standName == "TunnelStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
             player.transform.SetParent(vagonetaTransform);
-            Instantiate(pistol, pistolTransform.position, pistolTransform.rotation, vagonetaTransform);
+            GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
+            gun.transform.SetParent(vagonetaTransform);
         }
 
         isPlaying = true;

@@ -8,7 +8,7 @@ public class RingsDetector : MonoBehaviour
     // Variables
     [SerializeField] private ObjectDetection _objectDetection;
 
-    private void OnValidate()
+    private void Awake()
     {
         _objectDetection = gameObject.GetComponentInParent<ObjectDetection>();
     }

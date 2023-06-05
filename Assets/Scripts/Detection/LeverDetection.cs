@@ -37,10 +37,11 @@ public class LeverDetection : MonoBehaviour
         if (other.CompareTag("LeverOn"))
         {
             meshRenderer.material = leverActivateMat;
-            StartCoroutine(Coroutine_StartTunnel()); 
             ResetLeverTransform();
+            leverOn.Invoke();
         }
-        else if (other.CompareTag("LeverOff"))
+       
+        if (other.CompareTag("LeverOff"))
         {
             meshRenderer.material = leverOriginalMat;
         }
@@ -51,11 +52,5 @@ public class LeverDetection : MonoBehaviour
         gameObject.transform.position = leverPos;
         gameObject.transform.rotation = leverRot;
         meshRenderer.material = leverOriginalMat;
-    }
-
-    IEnumerator Coroutine_StartTunnel()
-    {
-        yield return new WaitForSeconds(0.5f);
-        leverOn.Invoke();
     }
 }

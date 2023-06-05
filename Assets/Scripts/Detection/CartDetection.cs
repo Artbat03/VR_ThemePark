@@ -23,14 +23,14 @@ public class CartDetection : MonoBehaviour
     [SerializeField] private int randomInt;
     [SerializeField] private List<GameObject> enemiesToKillList;
 
-    [Space(15), Header("SCRIPT REFERENCES")]
-    [SerializeField] private LeverDetection _leverDetection;
+    //[Space(15), Header("SCRIPT REFERENCES")]
+    //[SerializeField] private LeverDetection _leverDetection;
 
     private void Awake()
     {
         cartAnim = GetComponent<Animator>();
         randomInt = Random.Range(0, enemiesToKillList.Count);
-        _leverDetection = FindObjectOfType<LeverDetection>();
+        //_leverDetection = FindObjectOfType<LeverDetection>();
     }
 
     private void Update()
@@ -101,6 +101,6 @@ public class CartDetection : MonoBehaviour
         player.transform.SetParent(null);
         player.transform.position = worldTransform.position;
         player.transform.rotation = worldTransform.rotation;
-        _leverDetection.ResetLeverTransform();
+        //_leverDetection.ResetLeverTransform();
     }
 }

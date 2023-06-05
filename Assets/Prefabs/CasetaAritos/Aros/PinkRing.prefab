@@ -670,18 +670,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3667439533358541957}
+  - {fileID: 1725541325281659747}
+  - {fileID: 6473537668727299059}
+  - {fileID: 3134868377620266488}
+  - {fileID: 8810656331452767314}
+  - {fileID: 8958707120533327233}
+  - {fileID: 4894532183368725239}
+  - {fileID: 5100218540948179201}
+  - {fileID: 5967937242434982932}
+  - {fileID: 6319014547679441730}
+  - {fileID: 6125827315682733337}
+  - {fileID: 2963005766643365925}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295

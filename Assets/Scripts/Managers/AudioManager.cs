@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource musicVagoneta;
 
     public AudioClip[] listaAudio;
+    
     private void OnValidate()
     {
         if (musicSource == null)

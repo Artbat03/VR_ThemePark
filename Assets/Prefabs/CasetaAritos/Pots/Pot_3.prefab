@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 5
   objectDroppedBool: 0
+  isGlass: 1
 --- !u!54 &3775411449909098094
 Rigidbody:
   m_ObjectHideFlags: 0

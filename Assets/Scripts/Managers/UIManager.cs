@@ -44,14 +44,10 @@ public class UIManager : MonoBehaviour
 
     public void Play(string standName)
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[7]);
         AudioManager.instance.PlayMusic(AudioManager.instance.listaAudio[2]);
         gameCanvas.SetActive(true);
         GameManager.instance.NameStandTransform(standName);
-    }
-    
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ShowPlayPanels()

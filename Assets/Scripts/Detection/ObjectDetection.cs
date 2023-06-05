@@ -9,6 +9,7 @@ public class ObjectDetection : MonoBehaviour
     // Variables
     [SerializeField] private int points;
     public bool objectDroppedBool;
+    public bool isGlass;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,15 @@ public class ObjectDetection : MonoBehaviour
         {
             if (objectDroppedBool)
             {
+                if (isGlass)
+                {
+                    AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[8]);
+                }
+                else
+                {
+                    AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[9]);
+                }
+                
                 ScoreManager.instance.RingsScore += points;
                 PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
                 
@@ -28,6 +38,7 @@ public class ObjectDetection : MonoBehaviour
         }
         else if (other.CompareTag("Dart"))
         {
+            AudioManager.instance.PlaySFX(AudioManager.instance.listaAudio[6]);
             ScoreManager.instance.DartsScore += points;
             PlayerPrefs.SetInt("DartsScore", ScoreManager.instance.DartsScore);
             other.GetComponent<DestroyObject>().DestroyObj();

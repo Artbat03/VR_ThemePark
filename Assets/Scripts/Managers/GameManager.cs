@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject balloonsWall;
     [SerializeField] private GameObject darts;
     [SerializeField] private GameObject pistol;
+
+    public GameObject spawnedRingGameObject;
+    public GameObject spawnedDartsGameObject;
+    public GameObject spawnedGunGameObject;
     
     #region GETTERS && SETTERS
 
@@ -73,23 +77,23 @@ public class GameManager : MonoBehaviour
             _playerController.ResetPosition(gamePlayerTransforms[0]);
             Instantiate(rings);
             BottlesManager.instance.RingsInScene = GameObject.FindGameObjectsWithTag("Ring").Length;
-            GameObject ringGame = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
-            ringGame.transform.SetParent(gameTransform);
+            spawnedRingGameObject = Instantiate(gamePrefab, gameTransform.position, gameTransform.rotation);
+            spawnedRingGameObject.transform.SetParent(gameTransform);
         }
         else if (standName == "DartsStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[1]);
             Instantiate(darts);
             BalloonManager.instance.DartsInScene = GameObject.FindGameObjectsWithTag("Dart").Length;
-            GameObject dartsGame = Instantiate(balloonsWall);
-            dartsGame.transform.SetParent(balloonsTransform);
+            spawnedDartsGameObject = Instantiate(balloonsWall);
+            spawnedDartsGameObject.transform.SetParent(balloonsTransform);
         }
         else if (standName == "TunnelStand")
         {
             _playerController.ResetPosition(gamePlayerTransforms[2]);
             player.transform.SetParent(vagonetaTransform);
-            GameObject gun = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
-            gun.transform.SetParent(vagonetaTransform);
+            spawnedGunGameObject = Instantiate(pistol, pistolTransform.position, pistolTransform.rotation);
+            spawnedGunGameObject.transform.SetParent(pistolTransform);
         }
 
         isPlaying = true;

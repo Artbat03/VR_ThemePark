@@ -12,13 +12,14 @@ public class DestroyObject : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Floor"))
+        if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Table"))
         {
             if (this.gameObject.CompareTag("Ring"))
             {
                 BottlesManager.instance.RingsInScene--;
             }
-            else if (this.gameObject.CompareTag("Dart"))
+            
+            if (this.gameObject.CompareTag("Dart"))
             {
                 BalloonManager.instance.DartsInScene--;
             }

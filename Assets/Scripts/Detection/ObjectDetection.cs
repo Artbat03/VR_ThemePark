@@ -18,8 +18,12 @@ public class ObjectDetection : MonoBehaviour
             {
                 ScoreManager.instance.RingsScore += points;
                 PlayerPrefs.SetInt("RingsScore", ScoreManager.instance.RingsScore);
-                BottlesManager.instance.RingsInScene--;
-                other.GetComponent<DestroyObject>().DestroyObj();
+                
+                if (other.CompareTag("Ring"))
+                {
+                    BottlesManager.instance.RingsInScene--;
+                    other.GetComponent<DestroyObject>().DestroyObj();
+                }
                 Debug.Log("Ring Points");
             }
         }

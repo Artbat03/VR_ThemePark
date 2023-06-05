@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 539982476920703900}
   m_Layer: 0
   m_Name: Cono_2
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

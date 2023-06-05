@@ -24,6 +24,7 @@ TagManager:
   - Game
   - Table
   - BalloonsWall
+  - Objective
   layers:
   - Default
   - TransparentFX

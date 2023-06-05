@@ -47,7 +47,7 @@ public class BalloonManager : MonoBehaviour
                 ScoreManager.instance.CheckScoreForReward();
             }
             
-            //Destroy(GameObject.FindGameObjectWithTag("BalloonsWall").gameObject);
+            Destroy(GameManager.instance.spawnedDartsGameObject.gameObject);
         }
     }
 }

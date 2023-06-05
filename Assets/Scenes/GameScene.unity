@@ -3370,6 +3370,7 @@ MonoBehaviour:
   pistol: {fileID: 2617435859291120142, guid: 427c6472b92e75c4780fa39ffbc53ee7, type: 3}
   spawnedRingGameObject: {fileID: 0}
   spawnedDartsGameObject: {fileID: 0}
+  spawnedGunGameObject: {fileID: 0}
 --- !u!4 &2075292828
 Transform:
   m_ObjectHideFlags: 0

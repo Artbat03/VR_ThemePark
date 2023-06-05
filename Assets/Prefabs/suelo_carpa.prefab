@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8503526924602890055}
   - component: {fileID: 5901527398653633421}
   - component: {fileID: -5658913354788186667}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: suelo_carpa
   m_TagString: Floor
   m_Icon: {fileID: 0}

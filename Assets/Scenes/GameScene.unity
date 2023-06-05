@@ -3368,8 +3368,10 @@ MonoBehaviour:
     type: 3}
   darts: {fileID: 2845602890517632434, guid: 23ceae83c09a4f346afc6a7dde7fef4a, type: 3}
   pistol: {fileID: 2617435859291120142, guid: 427c6472b92e75c4780fa39ffbc53ee7, type: 3}
-  spawnedRingGameObject: {fileID: 0}
+  spawnedRingsGameObject: {fileID: 0}
   spawnedDartsGameObject: {fileID: 0}
+  spawnedRingGameGameObject: {fileID: 0}
+  spawnedDartGameGameObject: {fileID: 0}
   spawnedGunGameObject: {fileID: 0}
 --- !u!4 &2075292828
 Transform:
@@ -4127,17 +4129,17 @@ PrefabInstance:
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -1.6814194
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.2742608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.016706675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3029766064738591696, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}

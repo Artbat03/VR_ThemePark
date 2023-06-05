@@ -4124,17 +4124,17 @@ PrefabInstance:
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -1.6814194
       objectReference: {fileID: 0}
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -1.2742608
       objectReference: {fileID: 0}
     - target: {fileID: 2395972736388610410, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.016706675
       objectReference: {fileID: 0}
     - target: {fileID: 3029766064738591696, guid: 71cf354821bd28b4d835b80f9dd0a9c9,
         type: 3}

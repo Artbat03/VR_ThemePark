@@ -180,6 +180,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4879511, y: 0.3033997, z: 0.8492264}
   m_Center: {x: 0.0032596588, y: -0.07682042, z: -0.06995082}
+--- !u!1 &592194902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592194903}
+  m_Layer: 0
+  m_Name: SpawnPistol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592194903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592194902}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0.0000010325979, w: -0.0000010325979}
+  m_LocalPosition: {x: 0.00999927, y: 0.177593, z: -0.0019998841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2395972736388610410}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!1 &928639390
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +781,7 @@ Transform:
   - {fileID: 6977364250873852119}
   - {fileID: 1310111098}
   - {fileID: 928639391}
+  - {fileID: 592194903}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -787,8 +819,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7552195, y: 0.9572211, z: 1.0831628}
-  m_Center: {x: 0.0035650432, y: 0.28756985, z: -0.06535691}
+  m_Size: {x: 0.48617142, y: 0.9911802, z: 0.84957194}
+  m_Center: {x: 0.003565073, y: 0.2705903, z: -0.069753766}
 --- !u!95 &2763108359656068243
 Animator:
   serializedVersion: 4

@@ -106,7 +106,12 @@ public class CartDetection : MonoBehaviour
         player.transform.SetParent(null);
         player.transform.position = worldTransform.position;
         player.transform.rotation = worldTransform.rotation;
+        
+        if (!ScoreManager.instance.TunnelToyReached)
+        {
+            ScoreManager.instance.CheckScoreForReward();
+        }
+
         Destroy(GameManager.instance.spawnedGunGameObject.gameObject);
-        //_leverDetection.ResetLeverTransform();
     }
 }

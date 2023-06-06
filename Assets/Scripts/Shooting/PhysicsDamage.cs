@@ -20,6 +20,7 @@ public class PhysicsDamage : MonoBehaviour, ITakeDamage
         rb.useGravity = true;
         rb.AddRelativeForce(projectile.transform.forward * weapon.GetShootingForce(), ForceMode.Impulse);
         ScoreManager.instance.TunnelScore += targetPoints;
+        PlayerPrefs.SetInt("TunnelScore", ScoreManager.instance.TunnelScore);
         Destroy(gameObject);
     }
 }

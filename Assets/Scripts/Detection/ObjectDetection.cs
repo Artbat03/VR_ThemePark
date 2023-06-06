@@ -14,7 +14,10 @@ public class ObjectDetection : MonoBehaviour
 
     private void Awake()
     {
-        particleSystem.Stop();
+        if (this.gameObject.CompareTag("Balloon"))
+        {
+            particleSystem.Stop();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
